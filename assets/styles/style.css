@@ -328,7 +328,7 @@ header#page-header {
         flex-direction: column;
         gap: clamp(1rem, 2vw, 3rem);
         li {
-            font-size: clamp(16px, 1vw, 1.125rem);
+            font-size: 1rem;
             display: flex;
             flex-direction: column;
             gap: 0.81rem;
@@ -433,7 +433,7 @@ header#page-header {
             position: relative;
             flex: 1;
             color: #E9ECEF;
-            padding: 0 1rem 0;
+            padding: 0 0 0 1rem;
             .card-title {
                 font-size: clamp(1.125rem, 2vw, 18px);
                 font-weight: 700;
