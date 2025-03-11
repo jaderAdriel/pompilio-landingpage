@@ -38,6 +38,7 @@ html, body{
 }
 
 .page-section {
+    background-color: #F3F5F7;
     padding: var(--section-padding);
 }
 
@@ -485,4 +486,96 @@ header#page-header {
             .card-item:nth-child(4):after {background-color: #FFD501}
         }
     }
+}
+
+
+#danger-of-out-of-order {
+    background-color: #F3F5F7   ;
+    padding-top: clamp(2rem, 5vw, 5.625rem);
+    padding-bottom: clamp(2rem, 5vw, 5.625rem);
+    .page-section-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .page-section-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 300;
+            color: var(--c-primary-main);
+
+            > div {
+                display: flex;
+                flex-direction: column;
+            }
+            span {
+                &:first-child {
+                    font-weight: 300;
+                    line-height: 1;
+                    padding: 1rem 0;
+                    border-bottom: 1px solid var(--c-primary-main);
+                }
+
+                &:last-child {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    border: none;
+                    margin-top: 1rem;
+                    color: #343A40;
+                }
+            }
+
+
+        }
+    }
+
+    .page-section-content {
+        margin-top: clamp(2rem, 6vw, 7.125rem);
+
+        ul.list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+            gap: clamp(1rem, 2vw, 4vw);
+            flex-wrap: wrap;
+
+            row-gap: 3rem;
+
+            .list-item {
+                flex: 1;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .item-header {
+                    /*max-width: 15.5rem;*/
+                    display: flex;
+                    flex-direction: column;
+                    gap: clamp(1rem, 1vw, 2rem);
+
+                    .list-item-title {
+                        color: var(--c-primary-shade4);
+                        line-height: 1;
+                        font-weight: 700;
+                        font-size: clamp(18px, 2vw, 24px);
+                    }
+
+                    img {
+                        height: 3.175rem;
+                        max-width: 3.5rem;
+                        object-fit: contain;
+                    }
+                }
+
+                .list-item-content {
+                    font-weight: 400;
+                    color: #343A40;
+                }
+            }
+        }
+    }
+
 }
