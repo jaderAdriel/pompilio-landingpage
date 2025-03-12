@@ -455,8 +455,7 @@ header#page-header {
         margin-top: clamp(2rem, 4vw, 70px);
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(18em ,1fr));
-        /*column-gap: 2.375rem;*/
-        /*row-gap: 2.375rem;*/
+        row-gap: 2.375rem;
 
 
 
