@@ -34,7 +34,7 @@ html, body{
     width: 100%;
     font-family: var(--font), serif;
     color: var(--text-color);
-    font-size: clamp(12px, 1vw, 18px);
+    font-size: clamp(16px, 1vw, 24px);
 }
 
 .page-section {
@@ -48,7 +48,7 @@ main .page-section{
     padding-bottom: clamp(2rem, 3vw, 5.5rem);
 
     .page-section-title {
-        font-size: clamp(20px, 4vw, 48px);
+        font-size: clamp(1.8rem, 4vw, 48px);
         font-weight: 300;
     }
 
@@ -182,7 +182,8 @@ header#page-header {
         text-align: center;
         font-weight: 275;
         line-height: 1;
-        font-size: clamp(20px, 5vw, 56px);
+        font-size: clamp(1.8rem, 5vw, 56px);
+        color: var(--c-primary-shade4);
     }
 
     .section-content .infos-wrapper {
@@ -280,7 +281,6 @@ header#page-header {
         padding: 1em 0 ;
 
         .page-section-title {
-            font-size: clamp(18px, 4vw, 48px);
             font-weight: 300;
             color: var(--c-primary-main);
             display: flex;
@@ -351,13 +351,35 @@ header#page-header {
 
 /*Começo de media queries para a seção three-steps-section*/
 @media (min-width: 1300px) and (max-width: 2000px) {
-    #three-steps-section .page-section-header {
-        height: 0;
-        transform: translateY(0.5rem) translateX(clamp(15rem, 5vw, 18rem));
-        .page-section-title {
-            max-width: 20em;
-            text-indent: -5em;
-            padding-left: 7.2em;
+    #three-steps-section {
+        position: relative;
+        .left {
+            position: relative;
+
+            picture {
+
+                img {
+                    width: 40%;
+                    object-fit: contain;
+                    border-radius: 8px;
+
+                    @media (max-width: 1130px) {
+                        max-height: 20em;
+                    }
+                }
+            }
+        }
+
+        .page-section-header {
+            position: absolute;
+            top: 0;
+            left: 25%;
+
+            .page-section-title {
+                max-width: 20em;
+                text-indent: -5em;
+                padding-left: 7.2em;
+            }
         }
     }
 }
@@ -389,6 +411,7 @@ header#page-header {
     background-color: var(--c-primary-shade4);
     padding-top: clamp(1.5rem, 4vw, 5.125vw);
     color: #FFF;
+    padding-bottom: 4rem;
 
     .img-wrapper {
         width: 100%;
@@ -411,9 +434,6 @@ header#page-header {
     }
 
     @media (max-width: 1059px) {
-        .img-wrapper, .img-wrapper img {
-            display: none ;
-        }
     }
 
     .section-content {
