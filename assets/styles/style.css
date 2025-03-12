@@ -56,7 +56,8 @@ main .page-section{
 
 #hero-section-wrapper {
     padding-top: 26px;
-    background: #F3F5F7 radial-gradient(closest-corner , rgba(172, 185, 198, 0.63), #ffffff);
+    background: radial-gradient(circle, rgba(255, 247, 247, 0) 40%, rgba(255, 247, 247, 0.5) 50%, rgba(255, 247, 247, 1) 60%),
+conic-gradient(#d8ede6 0deg 50deg, #c7d4d4 80deg 180deg, #ecf0d5 180deg 270deg, #d8ede6 300deg 360deg);;
 
 }
 
@@ -223,8 +224,16 @@ header#page-header {
     #section-cover {
         object-fit: contain;
         object-position: center;
-        height: 33em;
-        min-width: 25em;
+        height: 33rem;
+    }
+
+    @media (max-width: 768px) {
+        #section-cover {
+            width: 100%;
+            object-fit: contain;
+            height: auto;
+            max-height: 50vh;
+        }
     }
 
     .section-content {
@@ -295,8 +304,8 @@ header#page-header {
     }
 
     .page-section-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        display: flex;
+        flex-wrap: wrap;
         align-items: flex-end;
         gap: clamp(0.5em, 2vw, 3.75rem);
 
@@ -350,7 +359,7 @@ header#page-header {
 }
 
 /*Começo de media queries para a seção three-steps-section*/
-@media (min-width: 1300px) and (max-width: 2000px) {
+@media (min-width: 1300px) and (max-width: 2100px) {
     #three-steps-section {
         position: relative;
         .left {
@@ -745,7 +754,7 @@ header#page-header {
     @media (max-width: 950px) {
         .page-section-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
         }
     }
 
