@@ -56,8 +56,8 @@ main .page-section{
 
 #hero-section-wrapper {
     padding-top: 26px;
-    background: radial-gradient(circle, rgba(255, 247, 247, 0) 40%, rgba(255, 247, 247, 0.5) 50%, rgba(255, 247, 247, 1) 60%),
-conic-gradient(#d8ede6 0deg 50deg, #c7d4d4 80deg 180deg, #ecf0d5 180deg 270deg, #d8ede6 300deg 360deg);;
+    background: radial-gradient(circle, rgba(255, 247, 247, 0) 40%, rgba(255, 247, 247, 0.5) 50%, rgb(243, 245, 247) 60%),
+conic-gradient(#d8ede6 0deg 50deg, #c7d4d4 80deg 180deg, #ecf0d5 180deg 270deg, #d8ede6 300deg 360deg);
 
 }
 
