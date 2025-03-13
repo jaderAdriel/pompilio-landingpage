@@ -38,7 +38,7 @@ html, body{
 }
 
 .page-section {
-    /*background-color: #F3F5F7;*/
+    background-color: #F3F5F7;
     padding: var(--section-padding);
 }
 
