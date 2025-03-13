@@ -5,12 +5,12 @@
     --c-primary-shade4: #04043D;
     --text-color: #6C757D;
     --font:  "Poppins";
-    --section-padding: clamp(1em, 3vw, 3.5em) clamp(1em, 3vw, 3.5em) 0;
+    --section-padding: clamp(2em, 3vw, 3.5em) clamp(1em, 3vw, 3.5em) 0;
 }
 
 @media (min-width: 1334px) {
     :root {
-        --section-padding: clamp(1em, 3vw, 3.5em) clamp(6rem, 10vw, calc((100vw - 50rem) / 2)) 0;
+        --section-padding: clamp(2em, 3vw, 3.5em) clamp(6rem, 10vw, calc((100vw - 50rem) / 2)) 0;
     }
 }
 
@@ -38,7 +38,7 @@ html, body{
 }
 
 .page-section {
-    background-color: #F3F5F7;
+    /*background-color: #F3F5F7;*/
     padding: var(--section-padding);
 }
 
@@ -457,8 +457,6 @@ header#page-header {
         grid-template-columns: repeat(auto-fit, minmax(18em ,1fr));
         row-gap: 2.375rem;
 
-
-
         .card-item {
             position: relative;
             flex: 1;
@@ -611,7 +609,6 @@ header#page-header {
 
 
 #speak-with-us {
-
 
     .page-section-header {
         .page-section-title {

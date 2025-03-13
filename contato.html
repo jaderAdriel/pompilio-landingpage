@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/contato.css">
+    <script src="src/index.js" defer></script>
+</head>
+<body>
+
+    <header id="page-header">
+        <nav id="navbar">
+            <button class="menu-action" id="menu-button">
+                <img src="assets/icons/menu-svgrepo-com.svg " alt="abrir menu">
+            </button>
+
+            <img id="page-logo" class="logo" src="assets/imgs/logo.png" alt="logo marca">
+
+            <ul id="page-tabs" class="list hidden">
+                <li class="list-item tab">
+                    <a href="./index.html" >Home</a>
+                </li>
+                <li class="list-item tab">
+                    <a href="" >Sobre nós</a>
+                </li>
+                <li class="list-item tab">
+                    <a href="" >Serviços</a>
+                </li>
+                <li class="list-item tab">
+                    <a href="" >Planos</a>
+                </li>
+                <li class="list-item tab">
+                    <a href="" >Blog</a>
+                </li>
+                <li class="list-item tab active">
+                    <a href="." >Contato</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="page-actions">
+            <button id="fale-conosco">
+                <a href="">Fale com a gente</a>
+            </button>
+
+            <button id="primary">
+                <a href="">Abrir empresa</a>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section" id="speak-with-us">
+
+            <div class="page-section-content">
+                <div class="left">
+                    <header class="page-section-header">
+                        <h2 class="page-section-title" >
+                            Fale conosco
+                        </h2>
+                    </header>
+
+                    <form method="POST" action="http://">
+                        <ul class="field-list">
+                            <li class="field">
+                                <label for="pessoa_nome">Nome</label>
+                                <input type="text" id="pessoa_nome" placeholder="Seu nome">
+                            </li>
+                            <li class="field">
+                                <label for="pessoa_email">Email</label>
+                                <input type="email" id="pessoa_email" placeholder="Seu melhor e-mail">
+                            </li>
+                            <li class="field">
+                                <label for="pessoa_wpp">Whatsapp</label>
+                                <input type="email" id="pessoa_wpp" placeholder="Número do seu whatsapp">
+                            </li>
+                        </ul>
+                        <button type="submit">Enviar mensagem</button>
+                    </form>
+
+                    <div class="endereco">
+                        <h2>Ou visite-nos</h2>
+                        <ul class="address-list">
+                            <li class="address-item">
+                                <img src="./assets/icons/localizacao.svg" alt="icone de endereço">
+                                <p>
+                                    Av. Messias Pereira Donato | nº. 163 – Edif. Flores – 1º Andar – Sala 108-A Aeroporto Velho | Guanambi | Bahia | 46.430-000
+                                </p>
+                            </li>
+
+                            <li class="address-item">
+                                <img src="./assets/icons/localizacao.svg" alt="icone de endereço">
+                                <p>
+                                    Av Brig Faria Lima, nº 1811, andar 9, Conj 918, Jardim Paulistano, São Paulo | São Paulo | 01.452-001
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="img-wrapper">
+                        <img  id="mapa" src="./assets/imgs/endereco.png" alt="imagem ilustrativa do endereço no maps">
+                        <img src="assets/imgs/pessoa-ao-telefone.png" id="pessoa-ao-telefone" alt="pessoa ao telefone">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
