@@ -5,12 +5,12 @@
     --c-primary-shade4: #04043D;
     --text-color: #6C757D;
     --font:  "Poppins";
-    --section-padding: clamp(2em, 3vw, 3.5em) clamp(1em, 3vw, 3.5em) 0;
+    --section-padding: clamp(2em, 3vw, 5.625em) clamp(1em, 3vw, 5.625em) 0;
 }
 
 @media (min-width: 1334px) {
     :root {
-        --section-padding: clamp(2em, 3vw, 3.5em) clamp(6rem, 10vw, calc((100vw - 50rem) / 2)) 0;
+        --section-padding: clamp(2em, 5vw, 5.625em) clamp(6rem, 10vw, calc((100vw - 50rem) / 2)) 0;
     }
 }
 
@@ -44,8 +44,8 @@ html, body{
 
 main .page-section{
 
-    padding-top: clamp(2rem, 2vw, 4rem);
-    padding-bottom: clamp(2rem, 3vw, 5.5rem);
+    padding-top: clamp(2rem, 3vw, 5.625rem);
+    padding-bottom: clamp(2rem, 3vw, 5.625rem);
 
     .page-section-title {
         font-size: clamp(1.8rem, 4vw, 48px);
@@ -311,7 +311,7 @@ header#page-header {
 
         .left {
             position: relative;
-
+            width: 50%;
             picture {
 
                 line-height: 0;
@@ -320,10 +320,14 @@ header#page-header {
                     object-fit: contain;
                     border-radius: 8px;
 
-                    @media (max-width: 1130px) {
-                        max-height: 20em;
-                    }
+                    /*@media (max-width: 1500px) {*/
+                    /*    height: 30vh;*/
+                    /*}*/
                 }
+            }
+
+            @media (max-width: 866px) {
+                width: 100%;
             }
 
             @media (max-width: 1300px) {
@@ -359,7 +363,7 @@ header#page-header {
 }
 
 /*Começo de media queries para a seção three-steps-section*/
-@media (min-width: 1300px) and (max-width: 2100px) {
+@media (min-width: 1300px)  {
     #three-steps-section {
         position: relative;
         .left {
@@ -754,4 +758,72 @@ header#page-header {
         }
     }
 
+}
+
+#ecosystem {
+    background-image: url("./../imgs/ondas.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    color: #212529;
+
+
+    .page-section-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 0 13rem;
+
+        @media (max-width: 1000px) {
+            padding: 0;
+        }
+
+        .page-section-title {
+            font-size: clamp(1.8rem, 4vw, 46px);
+            color: var(--c-primary-shade4);
+        }
+    }
+
+    .page-section-content {
+        margin-top: clamp(1rem, 5vw, 5.75rem);
+        margin-bottom: clamp(1rem, 5vw, 5.75rem);
+
+        #functionalities-list {
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            .list-item {
+                width: fit-content;
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                padding: 0.5rem 1rem;
+                font-size: 1.125rem;
+                background-color: rgba(255, 255, 255, 0.50);
+                .icon {
+                    background-color: #FFFFFF;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .page-section-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 0 10rem;
+        font-weight: 400;
+        font-size: 0.98rem;
+
+        @media (max-width: 1000px) {
+            padding: 0;
+        }
+    }
 }
