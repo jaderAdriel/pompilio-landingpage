@@ -921,10 +921,11 @@ header#page-header {
                 .list-title {
                     font-weight: 700;
                     font-size: 1.125rem;
+                    margin-bottom: 1rem;
+                    color: #343A40;
                 }
                 ul#partners-list {
                     width: 100%;
-                    max-width: 17rem;
                     display: flex;
                     flex-wrap: wrap;
                     gap: 0.5rem;
@@ -938,7 +939,6 @@ header#page-header {
 
             @media (min-width: 74.25rem) {
                 #partners-list-wrapper {
-
                     transform: translateY(-12rem) translateX(min(-19vw, -10rem));
                     height: 0;
                 }
@@ -946,28 +946,37 @@ header#page-header {
                 flex-direction: column;
                 gap: 2rem;
                 align-items: flex-end;
+                ul#partners-list {
+                    width: 100%;
+                    max-width: 17rem;
+                }
             }
 
-            @media (max-width: 62.375rem) {
+            @media (min-width: 40rem) and (max-width: 62.375rem) {
                 display: flex;
-                flex-wrap: wrap;
                 flex-direction: row-reverse;
                 gap: 2rem;
-                align-items: center;
-                justify-content: space-between;
 
                 .section-banner {
-                    #subtract {
-                        display: none;
-                    }
+                    height: 0;
+                    position: absolute;
+                    top: -100%;
+
                 }
             }
 
             @media (max-width: 37.5rem) {
+                justify-content: center;
                 .section-banner {
                     transform: translateY(2rem);
                 }
-                justify-content: center;
+                #subtract {
+                    display: none;
+                }
+                ul#partners-list, #partners-list-wrapper {
+                    width: 100%;
+                    max-width: 100%;
+                }
             }
 
 
