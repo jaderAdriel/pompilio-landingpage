@@ -161,6 +161,7 @@
 
                 line-height: 0;
                 img {
+                    width: 100%;
                     object-fit: contain;
                     border-radius: 8px;
                     height: auto;
