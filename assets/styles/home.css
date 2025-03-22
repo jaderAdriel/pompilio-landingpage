@@ -161,13 +161,10 @@
 
                 line-height: 0;
                 img {
-                    width: 100%;
                     object-fit: contain;
                     border-radius: 8px;
+                    height: auto;
 
-                    /*@media (max-width: 1500px) {*/
-                    /*    height: 30vh;*/
-                    /*}*/
                 }
             }
 
@@ -217,26 +214,10 @@
             picture {
 
                 img {
-                    width: 40%;
+                    width: 100%;
                     object-fit: contain;
                     border-radius: 8px;
-
-                    @media (max-width: 1130px) {
-                        max-height: 20em;
-                    }
                 }
-            }
-        }
-
-        .page-section-header {
-            position: absolute;
-            top:  clamp(2rem, 4vw, 5rem);
-            left: 25%;
-
-            .page-section-title {
-                max-width: 20em;
-                text-indent: -5em;
-                padding-left: 7.2em;
             }
         }
     }
@@ -254,10 +235,32 @@
             padding: 3rem;
         }
 
-        .left picture img {
-            max-height: none;
-            width: clamp(30rem, 33vw, 50rem);
-            max-width: 594px;
+        .left {
+
+            picture {
+                font-size: clamp(8px, 1vw, 16px);
+
+                img {
+                    width: 37.125em;
+                    padding-top: 2rem;
+                }
+
+            }
+        }
+
+
+        .page-section-header {
+            position: absolute;
+            top:  clamp(2rem, 4vw, 5rem);
+            left: clamp(10rem, 25%, 30rem);
+
+            font-size: clamp(8px, 1vw, 16px);
+
+            .page-section-title {
+                max-width: 24em;
+                text-indent: -5em;
+                padding-left: 10em;
+            }
         }
     }
 }
