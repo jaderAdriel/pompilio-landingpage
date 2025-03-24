@@ -7,8 +7,9 @@
     @media (min-width: 62.51rem) {
         background-image: url("./../imgs/waves.svg");
         background-repeat: no-repeat;
-        background-position-y: 115%;
+        background-position-y: 100%;
         background-size: contain;
+        padding-bottom: 0.8rem;
     }
 }
 
@@ -91,7 +92,7 @@
 
     .illustration-wrapper{
         grid-area: c;
-        font-size: clamp(10px, 1vw, 20px);
+        font-size: clamp(10px, 1vw, 19px);
         height: 36em;
         width: 33em;
         position: relative;
@@ -120,6 +121,72 @@
             bottom: 40%; left: 0;
             width: 18.9393%;
             height: auto;
+        }
+    }
+}
+
+#areas-de-atuacao {
+
+    @media (min-width: 111rem) {
+        padding-top: 2.8rem;
+    }
+
+    @media (min-width: 50.51rem) {
+        background-image: url("./../imgs/ondas.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    @media (max-width: 53rem) {
+        padding-top: 4rem;
+    }
+
+    .page-section-header {
+        color: var(--c-primary-shade4);
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        padding-bottom: 4rem;
+    }
+
+    .page-section-content {
+
+        .card-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            .card-item {
+                width: 100%;
+                max-width: 10rem;
+                height: 12.25rem;
+                backdrop-filter: blur(12px);
+                box-shadow: 0 0 16px 0 #ADB5BD59;
+                border: 1px solid #F3F5F766;
+                display: flex;
+                border-radius: 0.8rem;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.5rem;
+
+                span:nth-child(1) {
+                    width: 3.25rem;
+                    height: 3.25rem;
+                    border-radius: 100%;
+                    background-color: #fff;
+                }
+
+                span:nth-child(2) {
+                    text-align: center;
+                }
+
+                a {
+                    color: var(--c-primary-main);
+                }
+            }
         }
     }
 }
