@@ -32,7 +32,7 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"></noscript>
 
     <link rel="stylesheet" href="./assets/styles/style.css">
-    <link rel="stylesheet" href="assets/styles/servicos.css">
+    <link rel="stylesheet" href="assets/styles/plano.css">
 
     <script type="application/ld+json">
         {
@@ -76,177 +76,161 @@
         }
     </script>
 
+    <style>
+        /* Estilos para acessibilidade */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+
     <script src="src/index.js" defer></script>
 </head>
 <body>
 
-    <div id="hero-section-wrapper" class="page-section">
-        <header id="page-header">
-            <nav id="navbar">
-                <button class="menu-action" id="menu-button">
-                    <img src="assets/icons/menu-svgrepo-com.svg " alt="abrir menu">
-                </button>
+    <header id="page-header">
+        <nav id="navbar">
+            <button class="menu-action" id="menu-button">
+                <img src="assets/icons/menu-svgrepo-com.svg " alt="abrir menu">
+            </button>
 
-                <img id="page-logo" class="logo" src="assets/imgs/logo.png" alt="logo marca">
+            <img id="page-logo" class="logo" src="assets/imgs/logo.png" alt="logo marca">
 
-                <ul id="page-tabs" class="list hidden">
-                    <li class="list-item tab">
-                        <a href="./index.html" >Home</a>
-                    </li>
-                    <li class="list-item tab">
-                        <a href="sobre-nos.html" >Sobre nós</a>
-                    </li>
-                    <li class="list-item tab active">
-                        <a href="." >Serviços</a>
-                    </li>
-                    <li class="list-item tab">
-                        <a href="planos.html" >Planos</a>
-                    </li>
-                    <li class="list-item tab">
-                        <a href="" >Blog</a>
-                    </li>
-                    <li class="list-item tab">
-                        <a href="./contato.html" >Contato</a>
-                    </li>
-                </ul>
-            </nav>
+            <ul id="page-tabs" class="list hidden">
+                <li class="list-item tab">
+                    <a href="./index.html" >Home</a>
+                </li>
+                <li class="list-item tab">
+                    <a href="sobre-nos.html" >Sobre nós</a>
+                </li>
+                <li class="list-item tab">
+                    <a href="./servicos.html" >Serviços</a>
+                </li>
+                <li class="list-item tab active">
+                    <a href="." >Planos</a>
+                </li>
+                <li class="list-item tab">
+                    <a href="" >Blog</a>
+                </li>
+                <li class="list-item tab">
+                    <a href="." >Contato</a>
+                </li>
+            </ul>
+        </nav>
 
-            <div id="page-actions">
-                <button id="fale-conosco">
-                    <a href="">Fale com a gente</a>
-                </button>
+        <div id="page-actions">
+            <button id="fale-conosco">
+                <a href="">Fale com a gente</a>
+            </button>
 
-                <button id="primary">
-                    <a href="">Abrir empresa</a>
-                </button>
-            </div>
-        </header>
-
-        <section id="hero-section">
-            <header class="section-header">
-                <h1 class="page-title">A #DON transforma: confira nossos serviços</h1>
-            </header>
-
-            <div class="section-content">
-                <div class="infos-wrapper">
-                    <p class="info">
-                        Veja nossos serviços prestados e entre em contato com nossa equipe para começar a transformação do seu negócio.
-                    </p>
-                    <p class="info">
-                        A DON Contabilidade Digital empenha todos os seus esforços no desenvolvimento de produtos e serviços que atendem os nossos clientes da melhor forma possível.
-                    </p>
-                    <p class="info">
-                        Confira abaixo como podemos te ajudar:
-                    </p>
-                    <button class="primary-button"><a href="#">Quero ser #DON</a></button>
-
-                </div>
-            </div>
-
-            <div class="illustration-wrapper">
-                <img src="assets/imgs/servicos1.png" alt="pessoas conversando">
-                <img src="assets/imgs/servicos2.png" alt="pessoa mexendo no computador">
-                <img src="./assets/imgs/Points.svg" alt="Ilustração de serviços" class="illustration">
-                <img src="./assets/imgs/Frame%20125923.svg" alt="logo Don contabilidade">
-            </div>
-            
-        </section>
-    </div>
+            <button id="primary">
+                <a href="">Abrir empresa</a>
+            </button>
+        </div>
+    </header>
 
     <main>
-        <section class="page-section" id="areas-de-atuacao">
-            <header class="page-section-header">
-                <h2 class="page-section-title">Áreas de atuação da #DON</h2>
+        <section class="planos" id="planos-section" aria-labelledby="planos-heading">
+            <header class="planos-header">
+                <h1 id="planos-heading" class="section-title">Encontre o plano ideal para o seu negócio</h1>
+                <p class="section-subtitle">Planos para prestadores de serviços</p>
             </header>
-            <div class="page-section-content">
-                <ul class="card-list">
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Abertura de empresa</span>
-                        <a href="">Entre em contato</a>
+            
+            <div class="planos-container">
+                <ul class="card-list" role="list" aria-label="Planos disponíveis">
+                    <li class="card-item" role="listitem">
+                        <article class="plano-card" aria-labelledby="plano-essencial">
+                            <header class="plano-header">
+                                <h3 id="plano-essencial" class="nome-plano">Essencial</h3>
+                                <div class="preco-plano" aria-label="Preço do plano Essencial: até 25 mil reais por mês">
+                                    <span>Até</span>
+                                    <span class="valor" aria-hidden="true">25K</span>
+                                    <span class="sr-only">25 mil reais</span>
+                                    <span>por mês</span>
+                                </div>
+                            </header>
+                            
+                            <ul class="beneficios" aria-label="Benefícios incluídos no plano Essencial">
+                                <li>Contabilidade Digital</li>
+                                <li>Seus Impostos</li>
+                                <li>Suporte Online Completo</li>
+                                <li>Sede Virtual Gratuita</li>
+                            </ul>
+                        </article>
+                        <footer class="plano-footer">
+                            <div aria-hidden="true"></div>
+                            <button class="btn-solicitar primary-button" aria-label="Solicitar proposta para o plano Essencial">
+                                Solicitar proposta
+                            </button>
+                            <div aria-hidden="true"></div>
+                        </footer>
                     </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Gestão decustos</span>
-                        <a href="">Entre em contato</a>
+                    
+                    <li class="card-item" role="listitem">
+                        <article class="plano-card" aria-labelledby="plano-plus">
+                            <header class="plano-header">
+                                <h3 id="plano-plus" class="nome-plano">Plus</h3>
+                                <div class="preco-plano" aria-label="Preço do plano Plus: até 75 mil reais por mês">
+                                    <span>Até</span>
+                                    <span class="valor" aria-hidden="true">75K</span>
+                                    <span class="sr-only">75 mil reais</span>
+                                    <span>por mês</span>
+                                </div>
+                            </header>
+                            
+                            <ul class="beneficios" aria-label="Benefícios incluídos no plano Plus">
+                                <li>Contabilidade Digital</li>
+                                <li>Seus Impostos</li>
+                                <li>Suporte Online Completo</li>
+                                <li>Sede Virtual Gratuita</li>
+                            </ul>
+                        </article>
+                        <footer class="plano-footer">
+                            <div aria-hidden="true"></div>
+                            <button class="btn-solicitar primary-button" aria-label="Solicitar proposta para o plano Essencial">
+                                Solicitar proposta
+                            </button>
+                            <div aria-hidden="true"></div>
+                        </footer>
                     </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Planejamentotributário</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Consultoriasocietária</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Consultoria emlicitação​</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Revisão doFGTS</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Registro deMarca</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Consultoria deIRPF</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Consultoriafinanceira</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Consultoriatrabalhista</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Auditoria</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Períciacontábil</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Contabilidadepara farmácias</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">ConsultoriaTributária e Fiscal​</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">ConsultoriaEleitoral e Partidária</span>
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="card-item">
-                        <span></span>
-                        <span class="card-title">Contabilidadepara médicos</span>
-                        <a href="">Entre em contato</a>
+                    
+                    
+                    <li class="card-item" role="listitem">
+                        <article class="plano-card" aria-labelledby="plano-premium">
+                            <header class="plano-header">
+                                <h3 id="plano-premium" class="nome-plano">Premium</h3>
+                                <div class="preco-plano" aria-label="Preço do plano Premium: até 200 mil reais por mês">
+                                    <span>Até</span>
+                                    <span class="valor" aria-hidden="true">200K</span>
+                                    <span class="sr-only">200 mil reais</span>
+                                    <span>por mês</span>
+                                </div>
+                            </header>
+                            
+                            <ul class="beneficios" aria-label="Benefícios incluídos no plano Premium">
+                                <li>Contabilidade Digital</li>
+                                <li>Seus Impostos</li>
+                                <li>Suporte Online Completo</li>
+                                <li>Sede Virtual Gratuita</li>
+                            </ul>
+                        </article>
+                        <footer class="plano-footer">
+                                <div aria-hidden="true"></div>
+                                <button class="btn-solicitar primary-button" aria-label="Solicitar proposta para o plano Essencial">
+                                    Solicitar proposta
+                                </button>
+                                <div aria-hidden="true"></div>
+                        </footer>
                     </li>
                 </ul>
             </div>
-
-            <div class="img-wrapper">
-                <img src="./assets/imgs/logo-simplificada.png" class="icon-don-left">
-            </div>
-
         </section>
     </main>
 
