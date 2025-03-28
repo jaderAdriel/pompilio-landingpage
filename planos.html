@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escritório de Contabilidade | Don Contabilidade - Gestão Fiscal, Tributária e Contábil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Planos | Don Contabilidade - Gestão Fiscal, Tributária e Contábil</title>
     <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
     <meta name="description" content="A Don Contabilidade oferece os melhores serviços de contabilidade para sua empresa. Suporte completo em gestão fiscal, tributária e contábil. Fale conosco e otimize seus negócios hoje mesmo!">
     <meta name="author" content="Don Contabilidade">
@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://somosdon.com.br/">
 
-    <meta property="og:title" content="Escritorio de contabilidade | Don Contabilidade">
+    <meta property="og:title" content="Planos | Don Contabilidade">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://somosdon.com.br/">
     <meta property="og:description" content="A Don Contabilidade oferece os melhores serviços de contabilidade para sua empresa. Suporte completo em gestão fiscal, tributária e contábil.">
@@ -33,6 +33,26 @@
 
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/plano.css">
+
+    <style>
+        /* Estilos para acessibilidade */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        :focus {
+            outline: 2px solid #005fcc;
+            outline-offset: 2px;
+        }
+    </style>
 
     <script type="application/ld+json">
         {
@@ -76,232 +96,221 @@
         }
     </script>
 
-    <style>
-        /* Estilos para acessibilidade */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-    </style>
-
     <script src="src/index.js" defer></script>
 </head>
 <body>
 
-    <header id="page-header">
-        <nav id="navbar">
-            <button class="menu-action" id="menu-button">
-                <img src="assets/icons/menu-svgrepo-com.svg " alt="abrir menu">
-            </button>
+<header id="page-header">
+    <nav id="navbar" aria-label="Navegação principal">
+        <button class="menu-action" id="menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="page-tabs">
+            <img src="assets/icons/menu-svgrepo-com.svg" alt="" aria-hidden="true">
+        </button>
 
-            <img id="page-logo" class="logo" src="assets/imgs/logo.png" alt="logo marca">
+        <img id="page-logo" class="logo" src="assets/imgs/logo.png" alt="Don Contabilidade">
 
-            <ul id="page-tabs" class="list hidden">
-                <li class="list-item tab">
-                    <a href="./index.html" >Home</a>
+        <ul id="page-tabs" class="list hidden">
+            <li class="list-item tab">
+                <a href="./index.html">Home</a>
+            </li>
+            <li class="list-item tab">
+                <a href="sobre-nos.html">Sobre nós</a>
+            </li>
+            <li class="list-item tab">
+                <a href="./servicos.html">Serviços</a>
+            </li>
+            <li class="list-item tab active">
+                <a href="." aria-current="page">Planos</a>
+            </li>
+            <li class="list-item tab">
+                <a href="">Blog</a>
+            </li>
+            <li class="list-item tab">
+                <a href="./contato.html">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="page-actions">
+        <button id="fale-conosco" aria-label="Fale conosco via WhatsApp">
+            <a href="https://api.whatsapp.com/send?phone=557798022653&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20cont%C3%A1beis%20para%20abertura%20de%20empresa" tabindex="-1">
+                Fale com a gente
+            </a>
+        </button>
+
+        <button id="primary" aria-label="Abrir empresa via WhatsApp">
+            <a href="https://api.whatsapp.com/send?phone=557798022653&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20cont%C3%A1beis%20para%20abertura%20de%20empresa" tabindex="-1">
+                Abrir empresa
+            </a>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="planos" id="planos-section" aria-labelledby="planos-heading">
+        <header class="planos-header">
+            <h1 id="planos-heading" class="section-title">Encontre o plano ideal para o seu negócio</h1>
+            <p class="section-subtitle">Planos para prestadores de serviços</p>
+        </header>
+
+        <div class="planos-container">
+            <ul class="card-list" role="list" aria-label="Planos disponíveis">
+                <li class="card-item" role="listitem">
+                    <article class="plano-card" aria-labelledby="plano-essencial">
+                        <header class="plano-header">
+                            <h2 id="plano-essencial" class="nome-plano">Essencial</h2>
+                            <div class="preco-plano" aria-label="Preço do plano Essencial: até 25 mil reais por mês">
+                                <span>Até</span>
+                                <span class="valor" aria-hidden="true">25K</span>
+                                <span class="sr-only">25 mil reais</span>
+                                <span>por mês</span>
+                            </div>
+                        </header>
+
+                        <ul class="beneficios" aria-label="Benefícios incluídos no plano Essencial">
+                            <li>Contabilidade Digital</li>
+                            <li>Seus Impostos</li>
+                            <li>Suporte Online Completo</li>
+                            <li>Sede Virtual Gratuita</li>
+                        </ul>
+                    </article>
+                    <footer class="plano-footer">
+                        <div aria-hidden="true"></div>
+                        <a class="btn-solicitar primary-button" aria-label="Solicitar proposta para o plano Essencial"
+                           href="https://api.whatsapp.com/send/?phone=5577998022653&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20quero%20contratar%20o%20plano%20Essencial">
+                            Solicitar proposta
+                        </a>
+                        <div aria-hidden="true"></div>
+                    </footer>
                 </li>
-                <li class="list-item tab">
-                    <a href="sobre-nos.html" >Sobre nós</a>
+
+                <li class="card-item" role="listitem">
+                    <article class="plano-card" aria-labelledby="plano-plus">
+                        <header class="plano-header">
+                            <h2 id="plano-plus" class="nome-plano">Plus</h2>
+                            <div class="preco-plano" aria-label="Preço do plano Plus: até 75 mil reais por mês">
+                                <span>Até</span>
+                                <span class="valor" aria-hidden="true">75K</span>
+                                <span class="sr-only">75 mil reais</span>
+                                <span>por mês</span>
+                            </div>
+                        </header>
+
+                        <ul class="beneficios" aria-label="Benefícios incluídos no plano Plus">
+                            <li>Contabilidade Digital</li>
+                            <li>Seus Impostos</li>
+                            <li>Suporte Online Completo</li>
+                            <li>Sede Virtual Gratuita</li>
+                        </ul>
+                    </article>
+                    <footer class="plano-footer">
+                        <div aria-hidden="true"></div>
+                        <a class="btn-solicitar primary-button" aria-label="Solicitar proposta para o plano Plus"
+                           href="https://api.whatsapp.com/send/?phone=5577998022653&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20quero%20contratar%20o%20plano%20Plus">
+                            Solicitar proposta
+                        </a>
+                        <div aria-hidden="true"></div>
+                    </footer>
                 </li>
-                <li class="list-item tab">
-                    <a href="./servicos.html" >Serviços</a>
-                </li>
-                <li class="list-item tab active">
-                    <a href="." >Planos</a>
-                </li>
-                <li class="list-item tab">
-                    <a href="" >Blog</a>
-                </li>
-                <li class="list-item tab">
-                    <a href="." >Contato</a>
+
+                <li class="card-item" role="listitem">
+                    <article class="plano-card" aria-labelledby="plano-premium">
+                        <header class="plano-header">
+                            <h2 id="plano-premium" class="nome-plano">Premium</h2>
+                            <div class="preco-plano" aria-label="Preço do plano Premium: até 200 mil reais por mês">
+                                <span>Até</span>
+                                <span class="valor" aria-hidden="true">200K</span>
+                                <span class="sr-only">200 mil reais</span>
+                                <span>por mês</span>
+                            </div>
+                        </header>
+
+                        <ul class="beneficios" aria-label="Benefícios incluídos no plano Premium">
+                            <li>Contabilidade Digital</li>
+                            <li>Seus Impostos</li>
+                            <li>Suporte Online Completo</li>
+                            <li>Sede Virtual Gratuita</li>
+                        </ul>
+                    </article>
+                    <footer class="plano-footer">
+                        <div aria-hidden="true"></div>
+                        <a class="btn-solicitar primary-button" aria-label="Solicitar proposta para o plano Premium"
+                           href="https://api.whatsapp.com/send/?phone=5577998022653&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20quero%20contratar%20o%20plano%20Premium">
+                            Solicitar proposta
+                        </a>
+                        <div aria-hidden="true"></div>
+                    </footer>
                 </li>
             </ul>
-        </nav>
-
-        <div id="page-actions">
-            <button id="fale-conosco">
-                <a href="">Fale com a gente</a>
-            </button>
-
-            <button id="primary">
-                <a href="">Abrir empresa</a>
-            </button>
         </div>
-    </header>
+    </section>
+</main>
 
-    <main>
-        <section class="planos" id="planos-section" aria-labelledby="planos-heading">
-            <header class="planos-header">
-                <h1 id="planos-heading" class="section-title">Encontre o plano ideal para o seu negócio</h1>
-                <p class="section-subtitle">Planos para prestadores de serviços</p>
-            </header>
-            
-            <div class="planos-container">
-                <ul class="card-list" role="list" aria-label="Planos disponíveis">
-                    <li class="card-item" role="listitem">
-                        <article class="plano-card" aria-labelledby="plano-essencial">
-                            <header class="plano-header">
-                                <h3 id="plano-essencial" class="nome-plano">Essencial</h3>
-                                <div class="preco-plano" aria-label="Preço do plano Essencial: até 25 mil reais por mês">
-                                    <span>Até</span>
-                                    <span class="valor" aria-hidden="true">25K</span>
-                                    <span class="sr-only">25 mil reais</span>
-                                    <span>por mês</span>
-                                </div>
-                            </header>
-                            
-                            <ul class="beneficios" aria-label="Benefícios incluídos no plano Essencial">
-                                <li>Contabilidade Digital</li>
-                                <li>Seus Impostos</li>
-                                <li>Suporte Online Completo</li>
-                                <li>Sede Virtual Gratuita</li>
-                            </ul>
-                        </article>
-                        <footer class="plano-footer">
-                            <div aria-hidden="true"></div>
-                            <button class="btn-solicitar primary-button" aria-label="Solicitar proposta para o plano Essencial">
-                                Solicitar proposta
-                            </button>
-                            <div aria-hidden="true"></div>
-                        </footer>
+<footer id="page-footer" aria-label="Rodapé">
+    <div class="top">
+        <img src="./assets/imgs/logo2.svg" alt="Don Contabilidade">
+    </div>
+
+    <div class="middle">
+        <div class="contato">
+            <div>
+                <h2>Entre em contato conosco</h2>
+                <ul class="contato-list">
+                    <li class="contato-item">
+                        <img src="./assets/icons/mail.svg" alt="Ícone de email">
+                        <p>
+                            contato@doncontabilidade.com.br
+                        </p>
                     </li>
-                    
-                    <li class="card-item" role="listitem">
-                        <article class="plano-card" aria-labelledby="plano-plus">
-                            <header class="plano-header">
-                                <h3 id="plano-plus" class="nome-plano">Plus</h3>
-                                <div class="preco-plano" aria-label="Preço do plano Plus: até 75 mil reais por mês">
-                                    <span>Até</span>
-                                    <span class="valor" aria-hidden="true">75K</span>
-                                    <span class="sr-only">75 mil reais</span>
-                                    <span>por mês</span>
-                                </div>
-                            </header>
-                            
-                            <ul class="beneficios" aria-label="Benefícios incluídos no plano Plus">
-                                <li>Contabilidade Digital</li>
-                                <li>Seus Impostos</li>
-                                <li>Suporte Online Completo</li>
-                                <li>Sede Virtual Gratuita</li>
-                            </ul>
-                        </article>
-                        <footer class="plano-footer">
-                            <div aria-hidden="true"></div>
-                            <button class="btn-solicitar primary-button" aria-label="Solicitar proposta para o plano Essencial">
-                                Solicitar proposta
-                            </button>
-                            <div aria-hidden="true"></div>
-                        </footer>
-                    </li>
-                    
-                    
-                    <li class="card-item" role="listitem">
-                        <article class="plano-card" aria-labelledby="plano-premium">
-                            <header class="plano-header">
-                                <h3 id="plano-premium" class="nome-plano">Premium</h3>
-                                <div class="preco-plano" aria-label="Preço do plano Premium: até 200 mil reais por mês">
-                                    <span>Até</span>
-                                    <span class="valor" aria-hidden="true">200K</span>
-                                    <span class="sr-only">200 mil reais</span>
-                                    <span>por mês</span>
-                                </div>
-                            </header>
-                            
-                            <ul class="beneficios" aria-label="Benefícios incluídos no plano Premium">
-                                <li>Contabilidade Digital</li>
-                                <li>Seus Impostos</li>
-                                <li>Suporte Online Completo</li>
-                                <li>Sede Virtual Gratuita</li>
-                            </ul>
-                        </article>
-                        <footer class="plano-footer">
-                                <div aria-hidden="true"></div>
-                                <button class="btn-solicitar primary-button" aria-label="Solicitar proposta para o plano Essencial">
-                                    Solicitar proposta
-                                </button>
-                                <div aria-hidden="true"></div>
-                        </footer>
+
+                    <li class="contato-item">
+                        <img src="./assets/icons/telefone.svg" alt="Ícone de telefone">
+                        <p>
+                            <a href="https://api.whatsapp.com/send?phone=557798022653&text=Ol%C3%A1,%20vim%20do%20site%20e%20%20gostaria%20de%20abrir%20minha%20empresa.">(77) 9 9802-2653</a>
+                            <a href="https://api.whatsapp.com/send?phone=5511944476511&text=Ol%C3%A1,%20vim%20do%20site%20e%20%20gostaria%20de%20abrir%20minha%20empresa.">(11) 5286-1601</a>
+                        </p>
                     </li>
                 </ul>
             </div>
-        </section>
-    </main>
-
-    <footer id="page-footer">
-        <div class="top">
-            <img src="./assets/imgs/logo2.svg" alt="logo Don Contabilidade">
         </div>
+        <div class="endereco">
+            <div>
+                <h2>Visite-nos</h2>
+                <ul class="address-list">
+                    <li class="address-item">
+                        <img src="./assets/icons/localizacao.svg" alt="Ícone de endereço">
+                        <p>
+                            Av. Messias Pereira Donato | nº. 163 – Edif. Flores – 1º Andar – Sala 108-A Aeroporto Velho | Guanambi | Bahia | 46.430-000
+                        </p>
+                    </li>
 
-        <div class="middle">
-            <div class="contato">
-                <div>
-                    <h2>Entre em contato conosco</h2>
-                    <ul class="contato-list">
-                        <li class="contato-item">
-                            <img src="./assets/icons/mail.svg" alt="icone de email">
-                            <p>
-                                contato@doncontabilidade.com.br
-                            </p>
-                        </li>
-
-                        <li class="contato-item">
-                            <img src="./assets/icons/telefone.svg" alt="icone de telefone">
-                            <p>
-                                <a href="https://api.whatsapp.com/send?phone=557798022653&text=Ol%C3%A1,%20vim%20do%20site%20e%20%20gostaria%20de%20abrir%20minha%20empresa.">(77) 9 9802-2653</a>
-                                <a href=https://api.whatsapp.com/send?phone=5511944476511&text=Ol%C3%A1,%20vim%20do%20site%20e%20%20gostaria%20de%20abrir%20minha%20empresa.">(11) 9 4447-6511</a>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="endereco">
-                <div>
-                    <h2>Visite-nos</h2>
-                    <ul class="address-list">
-                        <li class="address-item">
-                            <img src="./assets/icons/localizacao.svg" alt="icone de endereço">
-                            <p>
-                                Av. Messias Pereira Donato | nº. 163 – Edif. Flores – 1º Andar – Sala 108-A Aeroporto Velho | Guanambi | Bahia | 46.430-000
-                            </p>
-                        </li>
-
-                        <li class="address-item">
-                            <img src="./assets/icons/localizacao.svg" alt="icone de endereço">
-                            <p>
-                                Av Brig Faria Lima, nº 1811, andar 9, Conj 918, Jardim Paulistano, São Paulo | São Paulo | 01.452-001
-                            </p>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="address-item">
+                        <img src="./assets/icons/localizacao.svg" alt="Ícone de endereço">
+                        <p>
+                            Av Brig Faria Lima, nº 1811, andar 9, Conj 918, Jardim Paulistano, São Paulo | São Paulo | 01.452-001
+                        </p>
+                    </li>
+                </ul>
             </div>
         </div>
+    </div>
 
-        <div class="bottom">
-            <p>
-                © 2025 by DON CONTABILIDADE E CONSULTORIA.<br/>Todos os direitos reservados.
-            </p>
+    <div class="bottom">
+        <p>
+            © 2025 by DON CONTABILIDADE E CONSULTORIA.<br/>Todos os direitos reservados.
+        </p>
 
-
-            <div class="links">
-                <a href=""><img src="./assets/icons/twitter.svg" alt="logo do twitter"></a>
-                <a href=""><img src="./assets/icons/instagram.svg" alt="logo do instagram"></a>
-                <a href=""><img src="./assets/icons/facebook.svg" alt="logo do facebook"></a>
-                <a href=""><img src="./assets/icons/linkedin.svg" alt="logo do linkedin"></a>
-            </div>
-
-            <p>
-                CNPJ: 21.593.182/0001-21 – CRC/BA 6527/O <br/>
-                CNPJ: 21.593.182/0002-02
-            </p>
-
+        <div class="links">
+            <a href="https://twitter.com/DonContabil" aria-label="Twitter"><img src="./assets/icons/twitter.svg" alt="icone do twitter"></a>
+            <a href="https://www.instagram.com/doncontabilidade/" aria-label="Instagram"><img src="./assets/icons/instagram.svg" alt="icone instagram"></a>
+            <a href="https://www.facebook.com/doncontabilidadedigital" aria-label="Facebook"><img src="./assets/icons/facebook.svg" alt="icone facebook"></a>
+            <a href="https://www.linkedin.com/company/don-inteligencia-contabil" aria-label="LinkedIn"><img src="./assets/icons/linkedin.svg" alt="icone linkedin"></a>
         </div>
-    </footer>
+
+        <p>
+            CNPJ: 21.593.182/0001-21 – CRC/BA 6527/O <br/>
+            CNPJ: 21.593.182/0002-02
+        </p>
+    </div>
+</footer>
 </body>
 </html>

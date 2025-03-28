@@ -181,7 +181,7 @@ header#page-header {
     }
 
     .left {
-        flex: 1;
+        flex: 2;
         form {
 
             ul.field-list {
@@ -237,7 +237,7 @@ header#page-header {
             }
             ul.address-list {
                 display: flex;
-                flex-direction: column;
+                flex-direction: column-reverse;
                 gap: 1rem;
 
 
@@ -259,9 +259,9 @@ header#page-header {
     }
 
     .right {
-        flex: 2;
+        flex: 3;
         position: relative;
-        font-size: clamp(8px, 3vw, 32px);
+        font-size: clamp(8px, 2vw, 28px);
 
         .img-wrapper {
             width: 100%;
