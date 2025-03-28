@@ -164,9 +164,10 @@ body{
 
         .left {
             position: relative;
+            display: flex;
             width: 50%;
             picture {
-
+                font-size: clamp(0.5rem, 2vw, 1rem);
                 line-height: 0;
                 img {
                     width: 100%;
@@ -174,11 +175,26 @@ body{
                     border-radius: 8px;
                     height: auto;
 
+                    @media (max-width: 2000px) {
+                        max-width: 35rem;
+                        max-height: 32rem;
+                    }
+
+                    @media (min-width: 2001px) {
+                        font-size: clamp(0.5rem, 2vw, 5rem);
+
+                        width: 35rem;
+                        height: 32rem;
+                    }
+
+
                 }
             }
 
             @media (max-width: 866px) {
                 width: 100%;
+                display: flex;
+                justify-content: center;
             }
 
             @media (max-width: 1300px) {
@@ -232,7 +248,11 @@ body{
     }
 }
 
-@media (min-width: 1151px) {
+@media (min-width: 1330px) {
+
+}
+
+@media (min-width: 1301px) {
     #three-steps-section {
 
         .arrow-icon {
@@ -240,17 +260,29 @@ body{
             z-index: 999;
             border-radius: 100%;
             bottom: 0;
+            left: 0.3rem;
             background-color: var(--c-primary-main);
-            padding: 3rem;
+            padding: 2.4rem;
         }
 
         .left {
-
+            justify-content: center;
             picture {
-                font-size: clamp(8px, 1vw, 16px);
+                position: relative;
+                font-size: clamp(0.5rem, 2vw, 1rem);
+                &:after {
+                    content: url("../icons/arrow_outward.svg");
+                    position: absolute;
+                    z-index: 999;
+                    border-radius: 100%;
+                    bottom: 0;
+                    left: 0.3rem;
+                    background-color: var(--c-primary-main);
+                    padding: 2.4rem;
+                }
 
                 img {
-                    width: 37.125em;
+                    /*width: 37.125em;*/
                     padding-top: 2rem;
                 }
 
@@ -259,21 +291,26 @@ body{
 
 
         .page-section-header {
+            width: 100%;
             position: absolute;
-            top:  clamp(2rem, 4vw, 5rem);
-            left: clamp(10rem, 25%, 30rem);
-
+            left: 0;
+            display: flex;
+            justify-content: center;
+            padding-left: min(35rem, 30%);
             font-size: clamp(8px, 1vw, 16px);
 
             .page-section-title {
-                max-width: 24em;
+                line-height: 2.5;
+                max-width: 15em;
+                margin-left: 2rem;
                 text-indent: -5em;
-                padding-left: 10em;
             }
         }
     }
 }
 /*FIM*/
+
+
 
 #how-can-we-help-section {
     position: relative;
@@ -295,10 +332,10 @@ body{
     }
 
     @media (min-width: 1060px) {
-        min-height: min(46rem, 70vh);
+        min-height: 80vh;
         background-image: url("./../imgs/seta.png") ;
         background-repeat: no-repeat;
-        background-position: center, bottom right;
+        background-position: center;
         background-size: 100%,  5rem;
     }
 

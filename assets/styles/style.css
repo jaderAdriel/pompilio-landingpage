@@ -47,7 +47,7 @@ main .page-section{
     padding-bottom: clamp(2rem, 5vw, 5.625rem);
 
     .page-section-title {
-        font-size: clamp(1.8rem, 2vw, 48px);
+        font-size: clamp(1.8rem, 1vw, 3rem);
         font-weight: 300;
     }
 
