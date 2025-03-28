@@ -1,9 +1,12 @@
 #hero-section {
-    padding-top: 2.5em;
+    padding-top: 0;
+}
+
+#page-header {
+    --bg-color-page: #F3F5F7;
 }
 
 #hero-section-wrapper {
-    padding-top: 26px;
     @media (min-width: 62.51rem) {
         background-image: url("./../imgs/waves.svg");
         background-repeat: no-repeat;
@@ -14,7 +17,6 @@
 }
 
 #hero-section {
-    padding-top: 3.6rem;
     color: #495057;
     width: 100%;
     display: grid;
@@ -35,6 +37,7 @@
     }
 
     @media (max-width: 62.5rem) and (min-width: 43.75rem) {
+
         grid-template-areas:
           "a a"
           "b c "

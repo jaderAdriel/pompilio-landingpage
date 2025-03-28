@@ -155,26 +155,32 @@
 
                 <div class="endereco">
                     <h2>Ou visite-nos</h2>
-                    <ul class="address-list">
+                    <ul class="address-list" aria-label="Nossos endereços">
                         <li class="address-item">
-                            <img src="./assets/icons/localizacao.svg" alt="Ícone de endereço">
-                            <p>
-                                Av. Messias Pereira Donato | nº. 163 – Edif. Flores – 1º Andar – Sala 108-A Aeroporto Velho | Guanambi | Bahia | 46.430-000
-                            </p>
+                            <button id="sp-address" class="address-button" aria-selected="false" onclick="handleAddressClick('Guanambi')" aria-label="Endereço de Guanambi. Av. Messias Pereira Donato, número 163, Edifício Flores, 1º Andar, Sala 108-A. CEP 46.430-000. Clique para ver no mapa">
+                                <img src="./assets/icons/localizacao.svg" alt="" aria-hidden="true">
+                                <p>
+                                    Av. Messias Pereira Donato | nº. 163 – Edif. Flores – 1º Andar – Sala 108-A<br>
+                                    Aeroporto Velho | Guanambi | Bahia | 46.430-000
+                                </p>
+                            </button>
                         </li>
 
                         <li class="address-item">
-                            <img src="./assets/icons/localizacao.svg" alt="Ícone de endereço">
-                            <p>
-                                Av Brig Faria Lima, nº 1811, andar 9, Conj 918, Jardim Paulistano, São Paulo | São Paulo | 01.452-001
-                            </p>
+                            <button id="gbi-address" class="address-button" aria-selected="true" onclick="handleAddressClick('São Paulo')" aria-label="Endereço de São Paulo. Avenida Brigadeiro Faria Lima, número 1811, andar 9, Conjunto 918, Jardim Paulistano. CEP 01.452-001. Clique para ver no mapa">
+                                <img src="./assets/icons/localizacao.svg" alt="" aria-hidden="true">
+                                <p>
+                                    Av Brig Faria Lima, nº 1811, andar 9, Conj 918<br>
+                                    Jardim Paulistano, São Paulo | São Paulo | 01.452-001
+                                </p>
+                            </button>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="right">
                 <div class="img-wrapper">
-                    <img id="mapa" src="./assets/imgs/endereco.png" alt="Mapa mostrando a localização da Don Contabilidade">
+                    <iframe id="mapa" aria-label="Mapa mostrando a localização da Don Contabilidade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1525542549803!2d-46.58714562373215!3d-23.562963861652886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5eaf6988f685%3A0x4fec87ce3b087a87!2sDon%20Contabil!5e0!3m2!1sen!2sbr!4v1743132457475!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <img src="./assets/imgs/pessoa-ao-telefone.png" id="pessoa-ao-telefone" alt="Pessoa falando ao telefone">
                 </div>
             </div>
@@ -249,5 +255,7 @@
         </p>
     </div>
 </footer>
+
+
 </body>
 </html>

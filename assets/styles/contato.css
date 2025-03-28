@@ -2,5 +2,7 @@
     padding: var(--section-padding);
     padding-top: 26px;
     padding-bottom: 26px;
-    background-color: #F3F5F7;
+    --bg-color-page: #F3F5F7;
+
 }
+

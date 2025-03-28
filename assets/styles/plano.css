@@ -5,7 +5,9 @@
 }
 
 
-
+#page-header {
+    --bg-color-page: rgba(255, 255, 255, 0.77);
+}
 
 #planos-section {
     padding: var(--section-padding);
