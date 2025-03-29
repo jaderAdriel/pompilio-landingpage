@@ -93,6 +93,7 @@ header#page-header {
 
             #page-tabs {
                 flex-direction: column;
+                padding-bottom: 1rem;
             }
 
             .menu-action { display: initial}
