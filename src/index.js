@@ -2,6 +2,7 @@
 
 const buttonMenu = document.getElementById("menu-button");
 const menu = document.getElementById("page-tabs");
+const navbar = document.getElementById("navbar");
 buttonMenu.addEventListener("click", () => {
 
     if (buttonMenu.classList.contains("closed")) {
@@ -16,15 +17,17 @@ buttonMenu.addEventListener("click", () => {
 const openMenu = () => {
     buttonMenu.querySelector("img").src = "assets/icons/close-svgrepo-com.svg";
     buttonMenu.classList.remove("closed");
-
+    buttonMenu.setAttribute("aria-expanded", "true");
     menu.classList.remove("hidden");
+    navbar.classList.add("menu-open-mobile");
 }
 
 const closeMenu = () => {
     buttonMenu.querySelector("img").src = "assets/icons/menu-svgrepo-com.svg";
     buttonMenu.classList.add("closed");
-
+    buttonMenu.setAttribute("aria-expanded", "false");
     menu.classList.add("hidden");
+    navbar.classList.remove("menu-open-mobile");
 }
 
 const locationMapUrl = new Map();

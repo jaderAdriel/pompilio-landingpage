@@ -15,7 +15,10 @@ body{
 }
 
 #page-header {
-    --bg-color-page: rgba(243, 245, 247, 0.8);
+    --bg-color-page: rgba(243, 245, 247, 0);
+    &.menu-open-mobile {
+        --bg-color-page: rgba(243, 245, 247, 0.9);
+    }
 }
 
 #hero-section {
