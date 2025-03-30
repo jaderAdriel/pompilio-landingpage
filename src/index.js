@@ -32,24 +32,19 @@ buttonMenu.addEventListener("click", () => {
 
 
 let haveSeenContatoSection = false;
-const contactSection =  document.getElementById("speak-with-us");
+const contactSection = document.getElementById("speak-with-us");
 
-if (contactSection != null) {
-    contactSection.addEventListener("click", (e) => {
-        if (!haveSeenContatoSection) loadMap();
-    })
-    contactSection.addEventListener("touchstart", (e) => {
-        if (!haveSeenContatoSection) loadMap();
-    })
+if (contactSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadMap();
+                observer.unobserve(entry.target); // Stop observing after loading
+            }
+        });
+    }, { threshold: 0.5 }); // When 50% of section is visible
 
-    contactSection.addEventListener("hover", (e) => {
-        if (!haveSeenContatoSection) loadMap();
-    })
-
-    contactSection.addEventListener("dragstart", (e) => {
-        if (!haveSeenContatoSection) loadMap();
-    })
-
+    observer.observe(contactSection);
 }
 
 const loadMap = () => {
@@ -64,15 +59,6 @@ const loadMap = () => {
 
     haveSeenContatoSection = true;
 }
-
-
-document.getElementById('load-map-btn').addEventListener('click', function() {
-    this.remove();
-    document.getElementById('static-map').remove();
-
-
-});
-
 
 
 
