@@ -141,13 +141,13 @@
             </p>
 
             <div class="cover-wrapper">
-                <div aria-label="Estamo presentes em 7 estados">
-                    <span aria-hidden="true">7</span>
+                <div>
+                    <span aria-label="Estamo presentes em 7 estados">7</span>
                     <span aria-hidden="true">Estados presentes</span>
                 </div>
-                <img src="assets/imgs/pompilio.png" id="section-cover" alt=" CEO da Don contabilidade" aria-hidden="true">
-                <div aria-label="Estamo presentes em 7 estados">
-                    <span aria-hidden="true">+9</span>
+                <img src="assets/imgs/pompilio.png" id="section-cover" alt="CEO da Don contabilidade" aria-hidden="true">
+                <div>
+                    <span aria-label="Estamo presentes em 7 estados">+9</span>
                     <span aria-hidden="true">anos de experiência</span>
                 </div>
             </div>
@@ -305,7 +305,7 @@
                     </h1>
                 </header>
 
-                <form method="POST" action="http://" aria-label="Formulário de contato">
+                <form method="POST" action="#" aria-label="Formulário de contato">
                     <ul class="field-list">
                         <li class="field">
                             <label for="pessoa_nome">Nome completo</label>
@@ -327,7 +327,7 @@
                     <h2>Ou visite-nos</h2>
                     <ul class="address-list" aria-label="Nossos endereços">
                         <li class="address-item">
-                            <button id="sp-address" class="address-button" aria-selected="false" onclick="handleAddressClick('Guanambi')" aria-label="Endereço de Guanambi. Av. Messias Pereira Donato, número 163, Edifício Flores, 1º Andar, Sala 108-A. CEP 46.430-000. Clique para ver no mapa">
+                            <button id="sp-address" class="address-button" onclick="handleAddressClick('Guanambi')" aria-label="Abrir maps no endereço de Guanambi. Av. Messias Pereira Donato, número 163, Edifício Flores, 1º Andar, Sala 108-A. CEP 46.430-000. Clique para ver no mapa">
                                 <img src="./assets/icons/localizacao.svg" alt="" aria-hidden="true">
                                 <p>
                                     Av. Messias Pereira Donato | nº. 163 – Edif. Flores – 1º Andar – Sala 108-A<br>
@@ -337,7 +337,7 @@
                         </li>
 
                         <li class="address-item">
-                            <button id="gbi-address" class="address-button" aria-selected="true" onclick="handleAddressClick('São Paulo')" aria-label="Endereço de São Paulo. Avenida Brigadeiro Faria Lima, número 1811, andar 9, Conjunto 918, Jardim Paulistano. CEP 01.452-001. Clique para ver no mapa">
+                            <button id="gbi-address" class="address-button" onclick="handleAddressClick('São Paulo')" aria-label="Abrir maps no endereço de São Paulo. Avenida Brigadeiro Faria Lima, número 1811, andar 9, Conjunto 918, Jardim Paulistano. CEP 01.452-001. Clique para ver no mapa">
                                 <img src="./assets/icons/localizacao.svg" alt="" aria-hidden="true">
                                 <p>
                                     Av Brig Faria Lima, nº 1811, andar 9, Conj 918<br>
@@ -449,7 +449,9 @@
                     </li>
                 </ul>
 
-                <button aria-label="Saiba mais sobre nossos parceiros"><a href="#">Saiba mais</a></button>
+                <!-- <a href="#parters"><button aria-label="Saiba mais sobre nossos parceiros"></button></a> -->
+
+                
             </div>
 
             <div class="right">
@@ -537,7 +539,7 @@
                 <div class="video-wrapper">
                     <iframe
                             width="560" height="315"
-                            src="https://www.youtube.com/embed/0_7UYnnDDsw?si=sljriMcfb9BbHowy"
+                            src="https://www.youtube-nocookie.com/embed/0_7UYnnDDsw?si=sljriMcfb9BbHowy"
                             title="Vídeo demonstrativo do Portal do Cliente Don Contabilidade"
                             frameborder="0"
                             referrerpolicy="strict-origin-when-cross-origin"
@@ -557,9 +559,8 @@
                     <li class="list-item">Fazer solicitação de ajustes e afins.</li>
                 </ul>
 
-                <button class="primary-button" aria-label="Quero ser DON">
-                    <a href="https://api.whatsapp.com/send?phone=5511944476511&text=Ol%C3%A1,%20vim%20do%20site%20e%20%20gostaria%20de%20de%20fazer%20parte%20da%20Don.">Quero ser #DON</a>
-                </button>
+                <a class="primary-button" aria-label="Quero ser DON" href="https://api.whatsapp.com/send?phone=5511944476511&text=Ol%C3%A1,%20vim%20do%20site%20e%20%20gostaria%20de%20de%20fazer%20parte%20da%20Don.">Quero ser #DON</a>
+
             </div>
         </div>
     </section>
