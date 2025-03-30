@@ -309,6 +309,10 @@ header#page-header {
             }
 
 
+            img#mapa {
+                position: relative;
+
+            }
 
             #mapa {
                 position: relative;
@@ -317,7 +321,7 @@ header#page-header {
                 min-height: 38em;
                 border-radius: 3em;
                 
-                @media (max-width:  78.125rem) and (min-width: 50rem){
+                @media (max-width:  78.125rem) and (min-width: 30rem){
                     height: 60em;
                 }
 
@@ -331,9 +335,8 @@ header#page-header {
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                width: 17em;
-                height: 20em;
-
+                height: 18em;
+                z-index: 2;
                 border-radius: 3.5em;
                 outline: 1rem solid #F3F5F7;
             }
